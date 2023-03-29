@@ -6,14 +6,36 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ArithmeticOperationTest {
 
+    ArithmeticOperation arithmeticObject = new ArithmeticOperation();
+
     @Test
     void toReturnNineForFiveAndFourAsInput()
     {
-        ArithmeticOperation arithmeticObject = new ArithmeticOperation();
         int exceptedValue = 9;
 
         int actualValue = arithmeticObject.Add(5,4);
 
         assertEquals(exceptedValue,actualValue);
+    }
+
+    @Test
+    void toReturnFiveForInputOfTenAndFive(){
+
+        int exceptedValue = 5;
+
+        int actualValue = arithmeticObject.Subtract(10,5);
+
+        assertEquals(exceptedValue,actualValue);
+    }
+
+    @Test
+    void toReturnNegativeFiveForInputOfFiveAndTen(){
+
+        int exceptedValue = -5;
+
+        int actualValue = arithmeticObject.Subtract(5,10);
+
+        assertEquals(exceptedValue,actualValue);
+
     }
 }
