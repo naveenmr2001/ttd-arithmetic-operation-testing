@@ -69,4 +69,36 @@ public class ArithmeticOperationTest {
 
         assertEquals(exceptedValue,actualValue);
     }
+
+    @Test
+    void toReturnZeroForInputOfNegativeOneAndZero(){
+
+        int exceptedValue = 0;
+
+        int actualValue = arithmeticObject.Multiplication(-1,0);
+
+        assertEquals(exceptedValue,actualValue);
+    }
+
+    @Test
+    void toReturnTwoForInputOfSixAndThree(){
+
+        int exceptedValue = 2;
+
+        int actualValue = arithmeticObject.Divison(6,3);
+
+        assertEquals(exceptedValue,actualValue);
+
+    }
+
+    @Test
+    void toReturnZeroForInputZeroAndFive(){
+
+        int exceptedValue = 0;
+
+        int actualValue = arithmeticObject.Divison(0,5);
+
+        assertEquals(exceptedValue,actualValue);
+
+    }
 }
