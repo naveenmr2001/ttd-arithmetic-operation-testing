@@ -1,19 +1,22 @@
 package com.m2p;
 
 public class ArithmeticOperation {
-    public int Add(int firstInputNumber,int secondInputNumber){
+    public int add(int firstInputNumber, int secondInputNumber){
         return firstInputNumber+secondInputNumber;
     }
 
-    public int Subtract(int firstInputNumber,int secondInputNumber){
+    public int subtract(int firstInputNumber, int secondInputNumber){
         return firstInputNumber-secondInputNumber;
     }
 
-    public int Multiplication(int firstInputNumber,int secondInputNumber){
+    public int multiply(int firstInputNumber, int secondInputNumber){
         return firstInputNumber*secondInputNumber;
     }
 
-    public int Divison(int firstInputNumber,int secondInputNumber){
+    public int divide(int firstInputNumber, int secondInputNumber) throws ArithmeticException{
+        if(secondInputNumber == 0){
+            throw new ArithmeticException();
+        }
         return firstInputNumber/secondInputNumber;
     }
 

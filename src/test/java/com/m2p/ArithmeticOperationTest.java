@@ -3,9 +3,9 @@ package com.m2p;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ArithmeticOperationTest {
-
+public class ArithmeticOperationTest{
     ArithmeticOperation arithmeticObject = new ArithmeticOperation();
 
     @Test
@@ -13,7 +13,7 @@ public class ArithmeticOperationTest {
     {
         int exceptedValue = 9;
 
-        int actualValue = arithmeticObject.Add(5,4);
+        int actualValue = arithmeticObject.add(5,4);
 
         assertEquals(exceptedValue,actualValue);
     }
@@ -23,7 +23,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 5;
 
-        int actualValue = arithmeticObject.Subtract(10,5);
+        int actualValue = arithmeticObject.subtract(10,5);
 
         assertEquals(exceptedValue,actualValue);
     }
@@ -33,7 +33,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = -5;
 
-        int actualValue = arithmeticObject.Subtract(5,10);
+        int actualValue = arithmeticObject.subtract(5,10);
 
         assertEquals(exceptedValue,actualValue);
 
@@ -44,7 +44,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 3;
 
-        int actualValue = arithmeticObject.Multiplication(1,3);
+        int actualValue = arithmeticObject.multiply(1,3);
 
         assertEquals(exceptedValue,actualValue);
 
@@ -55,7 +55,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = -3;
 
-        int actualValue = arithmeticObject.Multiplication(1,-3);
+        int actualValue = arithmeticObject.multiply(1,-3);
 
         assertEquals(exceptedValue,actualValue);
     }
@@ -65,7 +65,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 3;
 
-        int actualValue = arithmeticObject.Multiplication(-1,-3);
+        int actualValue = arithmeticObject.multiply(-1,-3);
 
         assertEquals(exceptedValue,actualValue);
     }
@@ -75,7 +75,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 0;
 
-        int actualValue = arithmeticObject.Multiplication(-1,0);
+        int actualValue = arithmeticObject.multiply(-1,0);
 
         assertEquals(exceptedValue,actualValue);
     }
@@ -85,7 +85,7 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 2;
 
-        int actualValue = arithmeticObject.Divison(6,3);
+        int actualValue = arithmeticObject.divide(6,3);
 
         assertEquals(exceptedValue,actualValue);
 
@@ -96,9 +96,14 @@ public class ArithmeticOperationTest {
 
         int exceptedValue = 0;
 
-        int actualValue = arithmeticObject.Divison(0,5);
+        int actualValue = arithmeticObject.divide(0,5);
 
         assertEquals(exceptedValue,actualValue);
 
+    }
+
+    @Test
+    void toReturnExceptionForInputFiveAndZero(){
+        assertThrows(ArithmeticException.class,()->arithmeticObject.divide(5,0));
     }
 }
