@@ -38,4 +38,35 @@ public class ArithmeticOperationTest {
         assertEquals(exceptedValue,actualValue);
 
     }
+
+    @Test
+    void toReturnThreeForInputOfOneAndThree(){
+
+        int exceptedValue = 3;
+
+        int actualValue = arithmeticObject.Multiplication(1,3);
+
+        assertEquals(exceptedValue,actualValue);
+
+    }
+
+    @Test
+    void toReturnNegativeThreeForInputOfOneAndNegativeThree(){
+
+        int exceptedValue = -3;
+
+        int actualValue = arithmeticObject.Multiplication(1,-3);
+
+        assertEquals(exceptedValue,actualValue);
+    }
+
+    @Test
+    void toReturnThreeForInputOfNegativeOneAndNegativeThree(){
+
+        int exceptedValue = 3;
+
+        int actualValue = arithmeticObject.Multiplication(-1,-3);
+
+        assertEquals(exceptedValue,actualValue);
+    }
 }
